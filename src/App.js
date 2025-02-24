@@ -3,8 +3,7 @@ import React from 'react'
 const App = () => {
   return (
     <div>
-      <p>First React test Case</p>
-      <img src='' title='AI Generated Image' />
+      <input type='text' placeholder='Enter Name' id='id' name='username'  />
       
     </div>
   )
