@@ -1,17 +1,11 @@
-import { render, screen } from "@testing-library/react";
-import { App } from "./App";
+import { fireEvent, render, screen } from "@testing-library/react";
+import {App} from './App'
 
-describe("testing Group", () => {
-  test("first test", () => {
-    render(<App/>)
-    let data = screen.getByText("this is describe paragraph");
-
-    expect(data).toBeInTheDocument(); 
-  }
-  )
-  test("Second Test",()=>{
-    render(<App/>)
-    let newData = screen.getByAltText("Ai Image")
-    expect(newData).toBeInTheDocument()
-  })
+test("Changes in event", ()=> {
+  render(<App/>);
+  let input = screen.getByRole('textbox')
+  fireEvent.change(input,{target:{value:"xyz"}});
+ 
+  
+  expect(input.value).toBe('xyz')
 })
