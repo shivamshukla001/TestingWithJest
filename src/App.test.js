@@ -3,9 +3,7 @@ import {App} from './App'
 
 test("Changes in event", ()=> {
   render(<App/>);
-  let input = screen.getByRole('textbox')
-  fireEvent.change(input,{target:{value:"xyz"}});
- 
-  
-  expect(input.value).toBe('xyz')
+  let btn = screen.getByRole("button");
+  fireEvent.click(btn)
+  expect(screen.getByText("hello World")).toBeInTheDocument();
 })
