@@ -1,12 +1,11 @@
 import React from 'react'
 
-const App = () => {
+export const App = () => {
   return (
     <div>
-      <input type='text' placeholder='Enter Name' id='id' name='username'  />
-      
+        <p>this is describe paragraph</p>
+        <img src="" alt="Ai Image" />
+
     </div>
   )
 }
-
-export default App
