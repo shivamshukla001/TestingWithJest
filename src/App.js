@@ -4,7 +4,7 @@ export const App = () => {
   const[data,setData] = useState("")
   return (
     <div>
-        <h1>Test Click Event Case</h1>
+        <h1>Jest testing</h1>
         <button  onClick={()=>setData("hello World")} >Click Me</button>
         <h1>{data}</h1>
     </div>
